@@ -1,4 +1,132 @@
 body{
-    background-color: teal;
-    color:#FFFF;
+    /* background-color: teal; */
+    /* color:#FFFF; */
+    background-color: #FFFF;
+    color:black;
+    margin:0;
+    padding:0;
+}
+header{
+    position: sticky !important;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.navbar{
+    /* border-bottom: 1px solid black; */
+    box-sizing: border-box;
+    background-color:#FFFF;
+    box-shadow: 0 2px 0px rgba(0,0,0,0.1);
+    transition:all 0.5s ease;
+
+
+}
+.navbar.scrolled{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+}
+.nav-items{
+    display: block;
+    width: 80%;
+
+    margin:auto;
+    display: flex;
+    /* border: 2px solid yellowgreen; */
+    
+    
+}
+.nav-logo{
+    padding:0;
+    /* border: 2px solid red; */
+    
+}
+.nav-logo img{
+    width:70px;
+    
+}
+.navbar .nav-links{
+    /* border: 2px solid green; */
+    display:flex;
+    align-items: center;
+    width: 100%;
+    justify-content: end;
+
+
+}
+.navbar .nav-links li {
+    list-style: none;
+    display: inline;
+    /* padding: 0; */
+    
+
+}
+.navbar .nav-links li a{
+    list-style: none;
+    text-decoration: none;
+    color:black;
+    /* border: 2px solid green; */
+    /* padding: 19px 10px; */
+    padding: 10px;
+    border-radius:10px;
+    
+}
+.navbar .nav-links li a:hover{
+    background-color: #003366;
+    color: #fff;
+    transition:all 0.5s ease;
+    cursor: pointer;
+}
+.menu-btn{
+   
+    display: flex;
+    align-items: center;
+    
+}
+#bars{
+    display:none;
+}
+#close{
+    display:none;
+}
+.containerC{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+
+/* Designing hamburger menu */
+.hamburger-menu{
+    background-color: #003366;
+    display: none;
+}
+.hamburger-menu li {
+    list-style: none;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 10px;
+
+}
+.hamburger-menu li a{ text-decoration: none;color:#fff;}
+.hamburger-menu.active{
+    display: block;
+    transition:all 0.5s ease;
+}
+
+@media screen and (max-width:780px) {
+    .navbar .nav-links{
+        visibility: hidden;
+        /* display: none; */
+    }
+    .menu-btn{
+        /* display:flex; */
+        cursor: pointer;
+        
+    }
+    #bars.active{display:block}
+    
+    #close.active{display:block}
+  
+
 }
