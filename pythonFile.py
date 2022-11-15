@@ -55,5 +55,5 @@ input_df = pd.DataFrame(params)
 result = fm.predict_proba(input_df)
 loss = result[0][0]
 win = result[0][1]
-print("batting_team" + "- " + str(round(win*100)) + "%")
-print("bowling_team" + "- " + str(round(loss*100)) + "%")
+print(battingteam + "- " + str(round(win*100)) + "%")
+print(bowlingteam + "- " + str(round(loss*100)) + "%")

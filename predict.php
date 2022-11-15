@@ -16,6 +16,10 @@
         $output = shell_exec($command);
 
     // echo $bteam." ".$bowlteam." ".$city." ".$target." ".$score." ".$oversCompleted." ";
-        echo $output;
+        // echo $output;
+        session_start();
+        $_SESSION['output'] = $output;
+        header("location:index.php");
+
     }
 ?>
